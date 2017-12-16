@@ -44,7 +44,6 @@ int solution(int a, int b, int c, int max)
 void output(int max)
 {
 	cout << "Наибольшее число = " << max << endl;
-
 	getchar();
 	getchar();
 }
