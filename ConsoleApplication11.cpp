@@ -1,4 +1,4 @@
-// ConsoleApplication8.cpp: определяет точку входа для консольного приложения.
+// ConsoleApplication8.cpp: РѕРїСЂРµРґРµР»СЏРµС‚ С‚РѕС‡РєСѓ РІС…РѕРґР° РґР»СЏ РєРѕРЅСЃРѕР»СЊРЅРѕРіРѕ РїСЂРёР»РѕР¶РµРЅРёСЏ.
 //
 
 #include "stdafx.h"
@@ -8,14 +8,18 @@ using namespace std;
 
 void input(int* a, int* b, int* c)
 {
-	cout << "Найдем максимальное значение из трех чисел " << endl;
-	cout << "Введите первое число" << endl;
+	cout << "РќР°Р№РґРµРј РјР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РёР· С‚СЂРµС… С‡РёСЃРµР» " << endl;
+
+	cout << "Р’РІРµРґРёС‚Рµ РїРµСЂРІРѕРµ С‡РёСЃР»Рѕ" << endl;
 	cin >> *a;
-	cout << "Введите второе число" << endl;
+
+	cout << "Р’РІРµРґРёС‚Рµ РІС‚РѕСЂРѕРµ С‡РёСЃР»Рѕ" << endl;
 	cin >> *b;
-	cout << "Введите третье число" << endl;
+
+	cout << "Р’РІРµРґРёС‚Рµ С‚СЂРµС‚СЊРµ С‡РёСЃР»Рѕ" << endl;
 	cin >> *c;
 }
+
 int solution(int a, int b, int c, int max)
 {
 
@@ -23,22 +27,27 @@ int solution(int a, int b, int c, int max)
 	{
 		max = a;
 	}
+
 	if ((b >= a) && (b >= c))
 	{
 		max = b;
 	}
+
 	if ((c >= b) && (c >= a))
 	{
 		max = c;
 	}
+
 	return max;
 }
+
 void output(int max)
 {
-	cout << "Наибольшее число = " << max << endl;
+	cout << "РќР°РёР±РѕР»СЊС€РµРµ С‡РёСЃР»Рѕ = " << max << endl;
 	getchar();
 	getchar();
 }
+
 int main()
 {
 	setlocale(LC_ALL, "rus");
@@ -46,7 +55,6 @@ int main()
 	input(&a, &b, &c);
 	max = solution(a, b, c, max);
 	output(max);
-
 
 	return 0;
 }
